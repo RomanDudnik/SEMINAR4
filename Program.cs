@@ -122,9 +122,7 @@ int [] CreateNewArray (int size, int min, int max)     //метод для со�
 void ShowArray(int [] array)    // метод который показывает нам созданный массив
 {
     for (int i = 0; i < array.Length; i++)    // array.Length (тк size в предыдущем методе)
-    {
         Console.Write (array[i] + " ");
-    }
 }
 
 Console.WriteLine("Input count of elements: ");
@@ -139,4 +137,4 @@ int minValue = Convert.ToInt32(Console.ReadLine());
 int [] array1 = CreateNewArray(countOfElem, minValue, maxValue);
 ShowArray(array1);
 
-// ShowArray(CreateNewArray(countOfElem));   //вызов метод в методе, заменяет поочередный вывод методов (две предыдцщие строки)
+// ShowArray(CreateNewArray(countOfElem));   //вызов метод в методе, заменяет поочередный вывод методов (две предыдущие строки)
