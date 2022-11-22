@@ -48,13 +48,14 @@ Console.WriteLine ($"Sum of elements from 1 to {userNum} is {result} ");
 //78 -> 2
 //89126 -> 5
 
+
 int CountOfDigits(int number)
 {
-    int current = 0;
-    while (number > 0)
+    int current = 1;
+    while (number >= 10)
     {
+        number = number / 10;  // 123 / 10 -> 12 / 10 -> 1 / 10 -> 0 
         current++;
-        number = number / 10;
     }
     return current;
 }
@@ -63,17 +64,12 @@ Console.WriteLine("Input your number: ");
 int userNum = Convert.ToInt32(Console.ReadLine());
 
 int countDigit;
-int userNum1 = userNum;
+int userNum1 = (-1) * userNum;  //*= (userNum = userNum * (-1)) / += (userNum = userNum + (-1)) / -= (userNum = userNum - (-1))
+    countDigit = CountOfDigits(userNum1);
 
 if (userNum >= 0)
     countDigit = CountOfDigits(userNum);
 else
-    userNum *=(-1);        //*= (userNum = userNum * (-1)) / += (userNum = userNum + (-1)) / -= (userNum = userNum - (-1))
-    countDigit = CountOfDigits(userNum);
+    countDigit = CountOfDigits(userNum1);
 
-Console.WriteLine($"Your number {userNum1} has {countDigit} digits");
-
-
-
-
-
+Console.WriteLine($"Your number {userNum} has {countDigit} digits");
