@@ -107,4 +107,36 @@ if (number < 0)
 Factorial(number);
 */
 
-//4)
+//4)Напишите программу , которая выводит массив из 8 элементов,
+//заполненный нулями и единицами в случайном порядке. 
+//[1,0,1,1,0,1,0,0]
+
+int [] CreateNewArray (int size, int min, int max)     //метод для создания и заполнения массива
+{
+    int [] array = new int [size];    // форма записи для объявления массива, int() тип данных массива [] array - имя массива new int[размер массива]
+    for (int i = 0; i < size; i++)    // цикл для заполнения массива 
+        array[i] = new Random().Next(min, max + 1);   // (min, max + 1) / .Next(0, 2) - от нуля ДО 2(2 не будет бать)
+    return array;
+}
+
+void ShowArray(int [] array)    // метод который показывает нам созданный массив
+{
+    for (int i = 0; i < array.Length; i++)    // array.Length (тк size в предыдущем методе)
+    {
+        Console.Write (array[i] + " ");
+    }
+}
+
+Console.WriteLine("Input count of elements: ");
+int countOfElem = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Input max value elements: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Input min value elements: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+
+int [] array1 = CreateNewArray(countOfElem, minValue, maxValue);
+ShowArray(array1);
+
+// ShowArray(CreateNewArray(countOfElem));   //вызов метод в методе, заменяет поочередный вывод методов (две предыдцщие строки)
