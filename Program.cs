@@ -41,14 +41,15 @@ int result = MetFindSum(userNum);                     //вывод резуль�
 
 Console.WriteLine ($"Sum of elements from 1 to {userNum} is {result} ");
 */
-//2) В этом методе (return) мы возвращаем результат из метода и можем сним взаимодействовать дальше в основной программе
+//2) В этом методе (return) мы возвращаем результат из метода 
+//и можем сним взаимодействовать дальше в основной программе
 
 //2.Напищите программу, которая принимает на вход число и выдает количество цифр в числе.
 //456 -> 3
 //78 -> 2
 //89126 -> 5
 
-
+/*
 int CountOfDigits(int number)
 {
     int current = 1;
@@ -73,3 +74,37 @@ else
     countDigit = CountOfDigits(userNum1);
 
 Console.WriteLine($"Your number {userNum} has {countDigit} digits");
+*/
+
+//3)Напишите программу, которая принимает на вход число N 
+//и выдаёт произведение чисел от 1 до N. (факториал) 
+//4 -> 24
+//5 -> 120
+
+/*
+void Factorial (int n)
+{
+    int multi = 1;
+    for (int cur = 1; cur <= n; cur++)
+    {
+        multi *= cur;       //multi = multi * cur
+    }
+    Console.WriteLine($" {n} -> {multi} "); 
+}
+
+Console.WriteLine("Input number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+if (number < 0)
+{
+    while (number < 0)
+    {
+        Console.WriteLine("Pls, input POSITIVE int number");
+        number = Convert.ToInt32(Console.ReadLine());
+    }
+}
+
+Factorial(number);
+*/
+
+//4)
