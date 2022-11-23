@@ -30,7 +30,7 @@ int MetFindSum(int a)
     int sum = 0;      // переменная, которая в последствии будет накапливать результат
     for (int current = 1; current <= a; current++)  // current -переменная условия цикла(для цикла), =1 -по условию отрезка, <= a -по условию отрезка, ++ -каждый цикл +1.
     {
-        sum += current;  // -сокращенная запись для summa = summa + current
+        sum += current;  // -сокращенная запись для sum = sum + current
     }
     return sum;
 }
